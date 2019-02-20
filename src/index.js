@@ -1,3 +1,9 @@
+/*index1: pass prop called value to the square.  Change square
+render metho to show that value by replacing "todo" with 
+{this.props.value}
+
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -6,7 +12,7 @@ class Square extends React.Component {
     render() {
       return (
         <button className="square">
-          {/* TODO */}
+          {this.props.value}
         </button>
       );
     }
@@ -14,7 +20,7 @@ class Square extends React.Component {
   
   class Board extends React.Component {
     renderSquare(i) {
-      return <Square />;
+      return <Square value={i}/>;
     }
   
     render() {
