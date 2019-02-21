@@ -2,6 +2,9 @@
 render metho to show that value by replacing "todo" with 
 {this.props.value}
 
+index2: added event listener to square "button"
+
+
 */
 
 import React from 'react';
@@ -11,7 +14,9 @@ import './index.css';
 class Square extends React.Component {
     render() {
       return (
-        <button className="square">
+        <button className="square" onClick={() => 
+          alert('click')
+        }>
           {this.props.value}
         </button>
       );
